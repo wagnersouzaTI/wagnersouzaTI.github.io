@@ -770,8 +770,11 @@ footer{border-top:1px solid var(--line);padding:26px 0 120px;display:flex;justif
     }
     function numbered(k){
       if(k>8){finish();return}
-      tryImg('feedbacks/'+k+'.jpg',function(im){push(im);numbered(k+1)},function(){
-        tryImg('feedbacks/'+k+'.png',function(im){push(im);numbered(k+1)},function(){finish()})});
+      var C=[k+'.jpg',k+'.png',k+'.jpg.png',k+'.png.png',k+'.jpeg',k+'.jpg.jpg'];
+      (function next(j){
+        if(j>=C.length){finish();return}
+        tryImg('feedbacks/'+C[j],function(im){push(im);numbered(k+1)},function(){next(j+1)});
+      })(0);
     }
     function load(){named(0)}
     function finish(){
