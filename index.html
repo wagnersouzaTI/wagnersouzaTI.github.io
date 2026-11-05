@@ -169,6 +169,37 @@ footer{border-top:1px solid var(--line);padding:26px 0 120px;display:flex;justif
 .screen.pop .hr h4{animation:pop .35s}
 @keyframes pop{from{transform:translateY(6px);opacity:.3}to{transform:none;opacity:1}}
 
+
+/* aba orçamento */
+.lnk{color:var(--accent);font-weight:700;text-underline-offset:3px}
+.oq{display:grid;grid-template-columns:1fr 360px;gap:36px;align-items:start;margin-top:30px}
+.oq form{display:grid;gap:30px;min-width:0}
+.oq fieldset{border:0;margin:0;padding:0;display:grid;gap:12px;min-width:0}
+.oq legend{padding:0;font:700 1.1rem/1.3 var(--sans);margin-bottom:10px}
+.oq legend span{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--accent);color:var(--accent-ink);font:800 .8rem/1 var(--sans);margin-right:10px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips button{font:600 .95rem/1 var(--sans);color:var(--muted);background:transparent;border:1px solid var(--line);border-radius:999px;padding:0 18px;min-height:48px;cursor:pointer;transition:background .15s,color .15s}
+.chips button:hover{border-color:var(--accent);color:var(--fg)}
+.chips button[aria-pressed="true"]{color:var(--accent-ink);background:var(--accent);border-color:var(--accent)}
+.chips.multi button[aria-pressed="true"]::before{content:"✓ ";font-weight:800}
+.oq .fields{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.oq .fields .full{grid-column:1/-1}
+.oq label{display:grid;gap:8px;font:600 .92rem/1.2 var(--sans)}
+.oq input,.oq select,.oq textarea{width:100%;min-height:52px;padding:12px 14px;border-radius:12px;border:1px solid #2c4170;background:var(--panel);color:var(--fg);font:500 1rem/1.4 var(--sans)}
+.oq textarea{min-height:120px;resize:vertical}
+.oq input:focus,.oq select:focus,.oq textarea:focus{outline:2px solid var(--accent);outline-offset:2px}
+.oq .hint{margin:0;color:var(--muted);font-size:.86rem}
+.sumcard{position:sticky;top:90px;background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:24px;display:grid;gap:16px}
+.sumcard h3{margin:0;font-size:1.25rem}
+.sumcard dl{margin:0;display:grid;gap:12px}
+.sumcard dt{font:700 .72rem/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:5px}
+.sumcard dd{margin:0;font-weight:600;overflow-wrap:anywhere}
+.sumcard dd.empty{color:var(--muted);font-weight:400}
+.sumcard .ref{background:var(--panel2);border-radius:12px;padding:14px;font-size:.9rem;color:var(--muted)}
+.sumcard .ref b{color:var(--fg);display:block;font-size:1.05rem;margin-bottom:2px}
+.sumcard .btn{width:100%}
+.sumcard .btn[aria-disabled="true"]{opacity:.55}
+@media(max-width:900px){.oq{grid-template-columns:1fr}.sumcard{position:static}.oq .fields{grid-template-columns:1fr}}
 @media(max-width:760px){
   .live{grid-template-columns:1fr;gap:26px}
   .live-form .btn{width:100%}
@@ -260,8 +291,9 @@ footer{border-top:1px solid var(--line);padding:26px 0 120px;display:flex;justif
     <nav class="tabs" aria-label="Seções">
       <a href="#inicio" id="tab-inicio">Início</a>
       <a href="#portfolio" id="tab-portfolio">Portfólio</a>
+      <a href="#orcamento" id="tab-orcamento">Orçamento</a>
     </nav>
-    <a class="btn wa sm" data-wa href="https://wa.me/5511947861810" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Orçamento</a>
+    <a class="btn wa sm" data-wa href="https://wa.me/5511947861810" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
   </div>
 </header>
 
@@ -422,6 +454,7 @@ footer{border-top:1px solid var(--line);padding:26px 0 120px;display:flex;justif
         <a class="btn ghost" data-wa data-msg="Olá! Vi o site da Nodo e quero saber sobre a Manutenção mensal." href="https://wa.me/5511947861810" target="_blank" rel="noopener">Pedir este</a>
       </div>
     </div>
+    <p class="sub" style="margin:26px 0 0">Precisa de outra coisa? <a class="lnk" href="#orcamento">Monte o orçamento do seu tipo de projeto →</a></p>
   </section>
 
   <section id="processo">
@@ -551,9 +584,71 @@ footer{border-top:1px solid var(--line);padding:26px 0 120px;display:flex;justif
       <article class="case you" data-cat="todos">
         <span class="tag">Próximo</span>
         <h3>O seu negócio pode estar aqui</h3>
-        <p>Conte o que você faz e eu monto um site com a cara dele.</p>
+        <p>Conte o que você faz e eu monto um site com a cara do seu negócio.</p>
         <a class="btn wa" data-wa data-msg="Olá! Vi o portfólio da Nodo e quero um site para o meu negócio." href="https://wa.me/5511947861810" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Quero o meu</a>
       </article>
+    </div>
+  </section>
+</div>
+
+<div id="view-orcamento" hidden>
+  <section style="border-top:0;padding-top:40px">
+    <div class="mono"><b>Orçamento</b> · para qualquer tipo de projeto</div>
+    <h2>Faça seu orçamento do seu tipo de projeto</h2>
+    <p class="sub">Escolha o que você precisa, conte os detalhes e envie. Eu recebo tudo organizado no WhatsApp e respondo com valor e prazo. Sem compromisso.</p>
+    <div class="oq">
+      <form id="oq-form" novalidate>
+        <fieldset>
+          <legend><span>1</span>Que tipo de projeto é?</legend>
+          <div class="chips" id="oq-type" role="group" aria-label="Tipo de projeto">
+            <button type="button" aria-pressed="false" data-v="Página única" data-ref="a partir de R$ 400">Página única</button>
+            <button type="button" aria-pressed="false" data-v="Site institucional" data-ref="a partir de R$ 900">Site institucional</button>
+            <button type="button" aria-pressed="false" data-v="Cardápio ou catálogo">Cardápio ou catálogo</button>
+            <button type="button" aria-pressed="false" data-v="Loja simples">Loja simples</button>
+            <button type="button" aria-pressed="false" data-v="Ferramenta ou calculadora">Ferramenta ou calculadora</button>
+            <button type="button" aria-pressed="false" data-v="Reforma do meu site atual">Reformar meu site</button>
+            <button type="button" aria-pressed="false" data-v="Outro projeto">Outro</button>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend><span>2</span>O que ele precisa ter? <small style="font-weight:500;color:var(--muted)">(marque quantos quiser)</small></legend>
+          <div class="chips multi" id="oq-feat" role="group" aria-label="Recursos">
+            <button type="button" aria-pressed="false">Botão de WhatsApp</button>
+            <button type="button" aria-pressed="false">Formulário de contato</button>
+            <button type="button" aria-pressed="false">Galeria de fotos</button>
+            <button type="button" aria-pressed="false">Lista de preços ou cardápio</button>
+            <button type="button" aria-pressed="false">Horários e agendamento</button>
+            <button type="button" aria-pressed="false">Mapa e Google Meu Negócio</button>
+            <button type="button" aria-pressed="false">Domínio próprio (.com.br)</button>
+            <button type="button" aria-pressed="false">Depoimentos de clientes</button>
+            <button type="button" aria-pressed="false">Textos e fotos feitos por mim</button>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend><span>3</span>Conte sobre o seu negócio</legend>
+          <div class="fields">
+            <label>Nome do negócio ou segmento<input id="oq-seg" placeholder="Ex.: Barbearia do Zé, clínica, oficina" autocomplete="organization"></label>
+            <label>Prazo desejado<select id="oq-prazo"><option value="">Não tenho pressa</option><option>Urgente, até 7 dias</option><option>Em 2 a 3 semanas</option><option>No próximo mês</option></select></label>
+            <label>Quanto pretende investir?<select id="oq-inv"><option value="">Prefiro conversar</option><option>Até R$ 500</option><option>R$ 500 a R$ 1.000</option><option>R$ 1.000 a R$ 2.000</option><option>Acima de R$ 2.000</option></select></label>
+            <label>Site que você gosta (opcional)<input id="oq-ref" placeholder="Cole um link de referência"></label>
+            <label class="full">Detalhes do projeto<textarea id="oq-det" placeholder="Explique com as suas palavras o que você quer. Quanto mais detalhe, mais certeiro o orçamento."></textarea></label>
+            <label class="full">Seu nome<input id="oq-nome" placeholder="Como posso te chamar?" autocomplete="name"></label>
+          </div>
+          <p class="hint">Seus dados vão só na mensagem do WhatsApp. Nada é guardado neste site.</p>
+        </fieldset>
+      </form>
+      <aside class="sumcard" aria-live="polite">
+        <h3>Resumo do seu pedido</h3>
+        <dl>
+          <div><dt>Projeto</dt><dd id="s-type" class="empty">Escolha o tipo</dd></div>
+          <div><dt>Recursos</dt><dd id="s-feat" class="empty">Nenhum marcado</dd></div>
+          <div><dt>Negócio</dt><dd id="s-seg" class="empty">Não informado</dd></div>
+          <div><dt>Prazo e investimento</dt><dd id="s-pi" class="empty">A combinar</dd></div>
+        </dl>
+        <div class="ref" id="s-ref"><b>Valor definido na conversa</b>Cada projeto é diferente. Eu respondo com o valor exato depois de entender o que você precisa.</div>
+        <a class="btn wa" id="oq-send" href="https://wa.me/5511947861810" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Enviar pedido no WhatsApp</a>
+        <button class="btn ghost" id="oq-copy" type="button">Copiar resumo</button>
+      </aside>
     </div>
   </section>
 </div>
@@ -578,25 +673,76 @@ footer{border-top:1px solid var(--line);padding:26px 0 120px;display:flex;justif
     a.href='https://wa.me/'+PHONE+'?text='+encodeURIComponent(a.getAttribute('data-msg')||MSG);
   });
 
-  var vi=document.getElementById('view-inicio'),vp=document.getElementById('view-portfolio');
-  var ti=document.getElementById('tab-inicio'),tp=document.getElementById('tab-portfolio');
+  var vi=document.getElementById('view-inicio'),vp=document.getElementById('view-portfolio'),vo=document.getElementById('view-orcamento');
+  var ti=document.getElementById('tab-inicio'),tp=document.getElementById('tab-portfolio'),to=document.getElementById('tab-orcamento');
   var dock=document.getElementById('dock'),dockPort=document.getElementById('dock-port');
   function route(first){
     var h=(location.hash||'').slice(1);
-    var port=h==='portfolio';
-    vi.hidden=port;vp.hidden=!port;
-    ti.removeAttribute('aria-current');tp.removeAttribute('aria-current');
-    (port?tp:ti).setAttribute('aria-current','page');
-    dockPort.hidden=port;
-    if(port){window.scrollTo(0,0)}
+    var port=h==='portfolio',orc=h==='orcamento';
+    vi.hidden=port||orc;vp.hidden=!port;vo.hidden=!orc;
+    [ti,tp,to].forEach(function(t){t.removeAttribute('aria-current')});
+    (port?tp:orc?to:ti).setAttribute('aria-current','page');
+    dockPort.hidden=port||orc;
+    if(port||orc){window.scrollTo(0,0)}
     else if(h&&h!=='inicio'){var el=document.getElementById(h);if(el)el.scrollIntoView()}
     else if(!first){window.scrollTo(0,0)}
     toggleDock();
   }
-  function toggleDock(){dock.classList.toggle('on',window.scrollY>260||!vp.hidden)}
+  function toggleDock(){dock.classList.toggle('on',vo.hidden&&(window.scrollY>260||!vp.hidden))}
   window.addEventListener('hashchange',function(){route(false)});
   window.addEventListener('scroll',toggleDock,{passive:true});
 
+
+  // ---------- orçamento flexível ----------
+  (function(){
+    var tb=document.querySelectorAll('#oq-type button'),fb=document.querySelectorAll('#oq-feat button');
+    var $=function(i){return document.getElementById(i)};
+    var type='',ref='';
+    function val(i){return $(i).value.trim()}
+    function setDd(el,txt,fallback){el.textContent=txt||fallback;el.className=txt?'':'empty'}
+    function data(){
+      var feats=[].filter.call(fb,function(b){return b.getAttribute('aria-pressed')==='true'}).map(function(b){return b.textContent});
+      return {type:type,feats:feats,seg:val('oq-seg'),prazo:val('oq-prazo'),inv:val('oq-inv'),ref:val('oq-ref'),det:val('oq-det'),nome:val('oq-nome')};
+    }
+    function message(d){
+      var L=['Olá! Vi o site da Nodo e quero fazer um orçamento.',''];
+      L.push('Projeto: '+(d.type||'ainda não sei, quero ajuda para escolher'));
+      if(d.seg)L.push('Negócio: '+d.seg);
+      if(d.feats.length)L.push('Precisa de: '+d.feats.join(', '));
+      if(d.prazo)L.push('Prazo: '+d.prazo);
+      if(d.inv)L.push('Investimento: '+d.inv);
+      if(d.ref)L.push('Referência: '+d.ref);
+      if(d.det)L.push('Detalhes: '+d.det);
+      if(d.nome)L.push('','Meu nome: '+d.nome);
+      return L.join('\n');
+    }
+    function upd(){
+      var d=data();
+      setDd($('s-type'),d.type,'Escolha o tipo');
+      setDd($('s-feat'),d.feats.join(', '),'Nenhum marcado');
+      setDd($('s-seg'),d.seg,'Não informado');
+      setDd($('s-pi'),[d.prazo,d.inv].filter(Boolean).join(' · '),'A combinar');
+      var r=$('s-ref');
+      r.innerHTML=ref?'<b></b>Valor de referência, que pode mudar conforme o que você marcar. Eu confirmo o valor exato na conversa.':'<b>Valor definido na conversa</b>Cada projeto é diferente. Eu respondo com o valor exato depois de entender o que você precisa.';
+      if(ref)r.querySelector('b').textContent=ref.charAt(0).toUpperCase()+ref.slice(1);
+      $('oq-send').href='https://wa.me/'+PHONE+'?text='+encodeURIComponent(message(d));
+    }
+    tb.forEach(function(b){b.addEventListener('click',function(){
+      tb.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});
+      type=b.getAttribute('data-v');ref=b.getAttribute('data-ref')||'';upd();
+    })});
+    fb.forEach(function(b){b.addEventListener('click',function(){
+      b.setAttribute('aria-pressed',b.getAttribute('aria-pressed')==='true'?'false':'true');upd();
+    })});
+    ['oq-seg','oq-prazo','oq-inv','oq-ref','oq-det','oq-nome'].forEach(function(i){$(i).addEventListener('input',upd);$(i).addEventListener('change',upd)});
+    $('oq-copy').addEventListener('click',function(){
+      var t=message(data()),b=this;
+      function ok(){b.textContent='Copiado'}
+      function sel(){b.textContent='Não foi possível copiar'}
+      try{navigator.clipboard.writeText(t).then(ok,sel)}catch(x){sel()}
+    });
+    upd();
+  })();
 
   // ---------- celular interativo de feedbacks ----------
   (function(){
@@ -615,7 +761,7 @@ footer{border-top:1px solid var(--line);padding:26px 0 120px;display:flex;justif
     function restart(){stop();if(open&&n>1&&!matchMedia('(prefers-reduced-motion:reduce)').matches)timer=setInterval(function(){go(cur+1,false)},3800)}
     function setOpen(v){open=v;box.classList.toggle('on',v);col.classList.toggle('on',v);box.setAttribute('aria-expanded',v);if(v){go(0,false);restart()}else stop()}
     // prints reais: liste aqui os nomes dos arquivos da pasta feedbacks/ (ou use 1.jpg, 2.jpg... sem listar)
-    var FB_FILES=['1.jpg.png','2.jpg.png'];
+    var FB_FILES=[];
     function tryImg(url,ok,fail){var im=new Image();im.alt='Feedback de cliente no WhatsApp';im.decoding='async';im.onload=function(){ok(im)};im.onerror=fail;im.src=url}
     function push(im){var d=document.createElement('div');d.className='slide';d.appendChild(im);addSlide(d)}
     function named(i){
