@@ -87,7 +87,8 @@ h3{font:400 1.2rem/1.1 var(--display);color:var(--ink);margin:0}
 .mini{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
 .m{background:#fff;border-radius:20px;padding:10px 10px 14px;display:flex;flex-direction:column;gap:6px;min-width:0}
 .m .ph{aspect-ratio:1.05;border-radius:14px;background:transparent}
-.m .ph img{mix-blend-mode:multiply;object-fit:contain;padding:2px}
+.m .ph{overflow:hidden}
+.m .ph img{mix-blend-mode:normal;object-fit:cover;border-radius:14px}
 .m b{font-size:.86rem;color:var(--ink)}
 .m small{font-size:.7rem;color:var(--muted);line-height:1.35}
 .lab{align-self:flex-start;font-size:.66rem;font-weight:700;padding:4px 8px;border-radius:99px;background:#dff1d9;color:#1e6a3a}
@@ -228,10 +229,10 @@ footer{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;paddin
     <section class="card sug">
       <div class="hd"><h2 style="margin:0;font-size:1.25rem">Sugestões de hoje</h2><div class="nav"><span>‹</span><span>›</span></div></div>
       <div class="mini">
-        <div class="m"><div class="ph "><div class="fb" data-art="mirtilo" aria-hidden="true"></div><img loading="lazy" src="https://images.pexels.com/photos/3987382/pexels-photo-3987382.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Mirtilos" onerror="this.remove()"></div><b>Mirtilo</b><span class="lab">Boa escolha</span><small>Rico em antioxidantes e bom para o coração.</small></div>
-        <div class="m"><div class="ph "><div class="fb" data-art="laranja" aria-hidden="true"></div><img loading="lazy" src="https://images.pexels.com/photos/7627415/pexels-photo-7627415.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Salmão cru" onerror="this.remove()"></div><b>Salmão</b><span class="lab">Super alimento</span><small>Rico em ômega 3 e ajuda o cérebro.</small></div>
-        <div class="m"><div class="ph "><div class="fb" data-art="abacate" aria-hidden="true"></div><img loading="lazy" src="https://images.pexels.com/photos/3722583/pexels-photo-3722583.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Brócolis" onerror="this.remove()"></div><b>Brócolis</b><span class="lab">Ótima escolha</span><small>Cheio de vitaminas e ajuda a imunidade.</small></div>
-        <div class="m"><div class="ph"><div class="fb" aria-hidden="true"><svg viewBox="0 0 100 100"><path d="M24 40l6-26M38 40l3-30M52 40l2-32M66 40l-1-30M78 40l-5-26" stroke="#f6c43a" stroke-width="8" stroke-linecap="round"/><path d="M18 40h64l-8 50H26z" fill="#e0483f" stroke="#b3302b" stroke-width="3" stroke-linejoin="round"/></svg></div><img loading="lazy" src="https://images.pexels.com/photos/1583891/pexels-photo-1583891.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Batatas fritas em uma tigela" onerror="this.remove()"></div><b>Batata frita</b><span class="lab bad">Limitar</span><small>Muita gordura e sal, melhor de vez em quando.</small></div>
+        <div class="m"><div class="ph "><img loading="lazy" src="https://images.pexels.com/photos/3987382/pexels-photo-3987382.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Mirtilos" onerror="this.remove()"></div><b>Mirtilo</b><span class="lab">Boa escolha</span><small>Rico em antioxidantes e bom para o coração.</small></div>
+        <div class="m"><div class="ph "><img loading="lazy" src="https://images.pexels.com/photos/7627415/pexels-photo-7627415.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Salmão cru" onerror="this.remove()"></div><b>Salmão</b><span class="lab">Super alimento</span><small>Rico em ômega 3 e ajuda o cérebro.</small></div>
+        <div class="m"><div class="ph "><img loading="lazy" src="https://images.pexels.com/photos/3722583/pexels-photo-3722583.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Brócolis" onerror="this.remove()"></div><b>Brócolis</b><span class="lab">Ótima escolha</span><small>Cheio de vitaminas e ajuda a imunidade.</small></div>
+        <div class="m"><div class="ph"><img loading="lazy" src="https://images.pexels.com/photos/1583891/pexels-photo-1583891.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Batatas fritas em uma tigela" onerror="this.remove()"></div><b>Batata frita</b><span class="lab bad">Limitar</span><small>Muita gordura e sal, melhor de vez em quando.</small></div>
       </div>
     </section>
 
