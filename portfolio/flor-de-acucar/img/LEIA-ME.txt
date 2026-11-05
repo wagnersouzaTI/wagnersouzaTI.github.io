@@ -1,0 +1,8 @@
+Coloque aqui as fotos (JPG), com estes nomes exatos:
+macarons.jpg    -> macarons coloridos
+bolo-festa.jpg  -> bolo de festa / de andares
+cupcakes.jpg    -> cupcakes com cobertura rosa
+bolo-naked.jpg  -> bolo naked com morangos
+docinhos.jpg    -> brigadeiros/docinhos em forminhas
+Sem a foto, o site mostra a ilustração no lugar.
+Dica: fotos em pe (3:4), ate ~300 KB cada. Use fotos gratuitas (Unsplash/Pexels) ou suas.

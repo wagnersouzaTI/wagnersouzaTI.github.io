@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Flor de Açúcar | Confeitaria artesanal</title>
+<meta name="description" content="Confeitaria artesanal em São Bernardo do Campo: bolos decorados, docinhos de festa, cupcakes e macarons sob encomenda pelo WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600&family=Nunito:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+[hidden]{display:none!important}
+img,svg{max-width:100%}
+:root{--cream:#fcf4ee;--paper:#fffaf6;--pink:#f4c9d0;--pink2:#f9dde1;--rose:#e69aa9;--berry:#c2325a;--wine:#7a1f35;--ink:#3d1522;--muted:#7d5a64;--line:#efd6d9;--gold:#d9a441;--serif:'Fraunces',Georgia,'Times New Roman',serif;--sans:'Nunito',system-ui,-apple-system,'Segoe UI',sans-serif;color-scheme:light}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:20px}
+body{background:var(--cream);color:var(--ink);font:17px/1.6 var(--sans);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));-webkit-font-smoothing:antialiased}
+.wrap{max-width:1100px;margin:0 auto}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--berry);outline-offset:3px;border-radius:10px}
+h1,h2,h3{font-family:var(--serif);font-weight:700;letter-spacing:-.015em;margin:0;text-wrap:balance}
+h2{font-size:clamp(1.9rem,5.6vw,3rem);line-height:1.08}
+h2 em,h1 em{font-style:italic;color:var(--berry)}
+
+/* botões */
+.wa{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:#25d366;color:#06260f;font:800 1rem/1 var(--sans);text-decoration:none;padding:17px 28px;border-radius:999px;box-shadow:0 5px 0 #159a47,0 14px 24px -10px rgba(37,211,102,.8);transition:transform .15s,box-shadow .15s;position:relative;border:0;cursor:pointer}
+.wa svg{width:22px;height:22px;flex:none}
+.wa:hover,.wa:focus-visible{transform:translateY(-2px);box-shadow:0 7px 0 #159a47,0 18px 28px -10px rgba(37,211,102,.9)}
+.wa:active{transform:translateY(4px);box-shadow:0 1px 0 #159a47}
+.wa.sm{padding:13px 20px;font-size:.92rem}
+.wa.sm svg{width:18px;height:18px}
+@media(prefers-reduced-motion:no-preference){.wa.pulse{animation:ring 2.4s infinite}@keyframes ring{0%{box-shadow:0 5px 0 #159a47,0 0 0 0 rgba(37,211,102,.7)}70%,100%{box-shadow:0 5px 0 #159a47,0 0 0 16px rgba(37,211,102,0)}}}
+.pill{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:0 22px;border-radius:999px;border:2px solid var(--wine);color:var(--wine);background:transparent;font:800 .92rem/1 var(--sans);text-decoration:none;cursor:pointer;transition:background .15s,color .15s}
+.pill:hover,.pill:focus-visible{background:var(--wine);color:#fff}
+.pill.fill{background:var(--rose);border-color:var(--rose);color:var(--ink)}
+.pill.fill:hover{background:var(--berry);border-color:var(--berry);color:#fff}
+
+/* barra Nodo */
+.nodo-bar{display:flex;justify-content:space-between;align-items:center;gap:6px 16px;flex-wrap:wrap;background:#0b0e13;color:#8b95a5;font:500 13px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif;padding:10px max(16px,env(safe-area-inset-right,0px)) 10px max(16px,env(safe-area-inset-left,0px));margin-left:calc(-1*max(16px,env(safe-area-inset-left,0px)));margin-right:calc(-1*max(16px,env(safe-area-inset-right,0px)))}
+.nodo-bar a{color:#5b9cff;text-decoration:none;font-weight:600}
+.nodo-bar a:hover{text-decoration:underline}
+
+/* faixa e topo */
+.strip{background:var(--wine);color:var(--pink2);overflow:hidden;white-space:nowrap;font:800 .78rem/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;padding:11px 0;margin-left:calc(-1*max(16px,env(safe-area-inset-left,0px)));margin-right:calc(-1*max(16px,env(safe-area-inset-right,0px)))}
+.strip span{display:inline-block;padding-right:3rem}
+@media(prefers-reduced-motion:no-preference){.strip .t{display:inline-block;animation:mq 30s linear infinite}@keyframes mq{to{transform:translateX(-50%)}}}
+header.top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 0}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font:700 1.5rem/1 var(--serif);color:var(--wine)}
+.logo svg{width:38px;height:38px}
+.logo small{display:block;font:700 .62rem/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-top:4px}
+nav.menu{display:flex;gap:2px}
+nav.menu a{text-decoration:none;font:700 .92rem/1 var(--sans);color:var(--muted);padding:12px 14px;border-radius:999px}
+nav.menu a:hover{color:var(--wine);background:var(--pink2)}
+
+/* herói */
+.hero{position:relative;background:linear-gradient(180deg,#f7d2d8 0,#f4c3cc 100%);border-radius:36px;overflow:hidden;padding:48px 28px 0;display:grid;grid-template-columns:1fr minmax(320px,430px) 1fr;grid-template-areas:"a wrap b";align-items:stretch;gap:0 22px;min-height:600px}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:92px;background:linear-gradient(180deg,#f9dde1,#fbe8ea);z-index:0}
+.hero>*{position:relative;z-index:1}
+.cwrap{grid-area:wrap;align-self:center;position:relative;margin-bottom:56px}
+.circle{aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 30% 25%,#fff2f4,#f9dce1);box-shadow:0 30px 60px -28px rgba(122,31,53,.5),inset 0 0 0 10px rgba(255,255,255,.5);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:12%;gap:14px}
+.circle .heart{width:30px;height:30px}
+.circle h1{font-size:clamp(2.1rem,5.2vw,3.5rem);line-height:1.02}
+.circle p{margin:0;color:var(--muted);font-size:.98rem;max-width:30ch}
+.circle .btns{display:flex;flex-direction:column;gap:10px;align-items:center}
+.ph{margin:0;border:6px solid #fff;box-shadow:0 22px 40px -22px rgba(122,31,53,.6);overflow:hidden;background:linear-gradient(180deg,#ffe9ec,#f7cbd2);position:relative;display:grid;place-items:center}
+.ph svg{width:70%;max-height:80%;filter:drop-shadow(0 8px 6px rgba(122,31,53,.18))}
+.ph img,.has img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;animation:fade .6s}
+@keyframes fade{from{opacity:0}}
+.ph.a{overflow:visible;border:0;background:none;box-shadow:none}
+.ph.a::before{content:"";position:absolute;inset:0;border-radius:999px 999px 28px 28px;border:6px solid #fff;background:linear-gradient(180deg,#ffd3dc,#f08aa5);box-shadow:0 22px 40px -22px rgba(122,31,53,.6)}
+.ph.a svg{position:relative;z-index:1}
+.ph.a.has img{inset:auto;left:50%;bottom:-3%;top:auto;width:auto;max-width:none;height:118%;object-fit:contain;z-index:2;transform:translateX(-50%) rotate(7deg);filter:drop-shadow(0 18px 14px rgba(122,31,53,.35))}
+@media(prefers-reduced-motion:no-preference){.ph.a.has img{animation:bob 5s ease-in-out infinite}@keyframes bob{50%{transform:translateX(-50%) translateY(-12px) rotate(3deg)}}}
+.ph.b.has img{object-position:50% 45%}
+.seal{position:absolute;left:-7%;top:2%;width:112px;height:112px;z-index:3;filter:drop-shadow(0 8px 10px rgba(122,31,53,.3))}
+.seal .spin{transform-origin:50% 50%;animation:spin 18s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){.seal .spin{animation:none}}
+@media(max-width:760px){.seal{left:-2%;top:-26px;width:88px;height:88px}.ph.a.has img{height:112%}}
+.ph.a,.ph.b{border-radius:999px 999px 28px 28px;width:min(250px,100%);aspect-ratio:3/4}
+.ph.a{grid-area:a;align-self:end;justify-self:end;margin-bottom:72px}
+.ph.b{grid-area:b;align-self:start;justify-self:start;margin-top:30px}
+.ph.c{position:absolute;right:-9%;bottom:2%;width:36%;aspect-ratio:1;border-radius:50%;z-index:2}
+.conf{position:absolute;z-index:1;border-radius:50%;pointer-events:none}
+@media(prefers-reduced-motion:no-preference){.conf{animation:fl 6s ease-in-out infinite;animation-delay:var(--d,0s)}@keyframes fl{50%{transform:translateY(-12px) rotate(18deg)}}}
+
+/* três cartões em bandeirola */
+.trio{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;margin:64px auto 0;max-width:900px;align-items:stretch}
+.flag{background:var(--pink);clip-path:polygon(0 0,100% 0,100% 90%,50% 100%,0 90%);padding:34px 26px 64px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:12px}
+.flag .ic{width:84px;height:84px;border-radius:50%;background:#fff;display:grid;place-items:center;padding:8px}
+.flag h3{font-size:1.45rem}
+.flag p{margin:0;color:var(--muted);font-size:.94rem}
+.mid{padding:0 10px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px}
+.arch{position:relative;overflow:hidden;width:100%;max-width:240px;aspect-ratio:3/3.2;border-radius:120px 120px 16px 16px;background:linear-gradient(180deg,#ffe9ec,#f7cbd2);display:grid;place-items:center;padding:14px;border:3px solid #fff;box-shadow:0 16px 30px -18px rgba(122,31,53,.5)}
+.mid h3{font-size:1.2rem;margin-top:4px}
+.mid p{margin:0;color:var(--muted);font-size:.9rem}
+
+section{padding:78px 0 0}
+.head{text-align:center;max-width:640px;margin:0 auto 34px;display:grid;gap:10px;justify-items:center}
+.eyebrow{font:800 .74rem/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--berry)}
+.head p{margin:0;color:var(--muted)}
+
+
+/* galeria de fotos reais */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:150px;gap:12px;grid-auto-flow:dense}
+.gal figure{margin:0;position:relative;overflow:hidden;border-radius:22px;background:linear-gradient(160deg,#ffe3e8,#f7c3cf);box-shadow:0 14px 28px -22px rgba(122,31,53,.6)}
+.gal figure:nth-child(1){grid-column:span 2;grid-row:span 2}
+.gal figure:nth-child(4){grid-row:span 2}
+.gal figure:nth-child(5){grid-column:span 2}
+.gal figure:nth-child(6){grid-row:span 2}
+.gal img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.gal figure:hover img{transform:scale(1.06)}
+.gal figcaption{position:absolute;left:10px;bottom:10px;background:rgba(255,248,241,.92);color:var(--wine);font:800 .78rem/1 var(--sans);padding:8px 12px;border-radius:999px}
+.credit{text-align:center;color:var(--muted);font-size:.78rem;margin:16px 0 0}
+.credit a{color:inherit}
+@media(max-width:760px){.gal{grid-template-columns:1fr 1fr;grid-auto-rows:130px}.gal figure:nth-child(1){grid-column:span 2;grid-row:span 2}.gal figure:nth-child(4),.gal figure:nth-child(6){grid-row:auto}.gal figure:nth-child(5){grid-column:span 2}}
+
+/* cardápio */
+.menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.item{background:#fff;border-radius:24px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 14px 28px -22px rgba(122,31,53,.6);min-width:0}
+.item .pic{position:relative;overflow:hidden;aspect-ratio:1/.92;display:grid;place-items:center;background:var(--bg,var(--pink2));padding:10px}
+.item .pic::before{content:"";position:absolute;inset:11% 9% 9%;background:#fff8f1;border-radius:58% 42% 52% 48%/46% 56% 44% 54%;box-shadow:inset 0 -10px 20px rgba(122,31,53,.08)}
+.sat{position:absolute;z-index:2;pointer-events:none;display:block}
+.sat svg{width:100%;height:100%;filter:drop-shadow(0 4px 4px rgba(0,0,0,.25))}
+.sat.s1{width:30px;height:32px;left:9%;top:9%;transform:rotate(-18deg)}
+.sat.s2{width:20px;height:20px;right:11%;top:14%}
+.sat.s3{width:24px;height:12px;right:15%;bottom:12%;transform:rotate(-30deg)}
+@media(prefers-reduced-motion:no-preference){.pic .m{animation:bob2 4.6s ease-in-out infinite;animation-delay:var(--d,0s)}.sat{animation:bob2 5.4s ease-in-out infinite;animation-delay:var(--d,0s)}@keyframes bob2{50%{translate:0 -8px}}}
+.item:hover .pic .m{scale:1.06}
+.item .pic.has,.arch.has{padding:0}
+.pic .m{position:relative;z-index:1;width:86%;max-height:108%;transition:scale .4s}
+.item .body{padding:18px 20px 22px;display:flex;flex-direction:column;gap:8px;flex:1}
+.item h3{font-size:1.2rem}
+.item p{margin:0;color:var(--muted);font-size:.92rem}
+.item .row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:auto;padding-top:6px}
+.price{font:700 1.25rem/1 var(--serif);color:var(--wine)}
+.price small{font:700 .7rem/1 var(--sans);color:var(--muted)}
+
+/* monte sua caixa */
+.builder{background:#fff;border-radius:32px;padding:34px;display:grid;grid-template-columns:1.1fr .9fr;gap:34px;box-shadow:0 20px 40px -30px rgba(122,31,53,.6)}
+.sizes{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 18px}
+.size{font:800 .92rem/1 var(--sans);color:var(--wine);background:transparent;border:2px solid var(--line);border-radius:999px;padding:0 20px;min-height:46px;cursor:pointer}
+.size[aria-pressed="true"]{background:var(--wine);color:#fff;border-color:var(--wine)}
+.flavors{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px}
+.fl{display:flex;align-items:center;gap:10px;background:var(--paper);border:2px solid var(--line);border-radius:18px;padding:8px 10px}
+.fl .ico{width:46px;height:46px;flex:none}
+.fl b{flex:1;font:800 .92rem/1.2 var(--sans);min-width:0}
+.qty{display:flex;align-items:center;gap:6px}
+.qty button{width:34px;height:34px;border-radius:50%;border:2px solid var(--wine);background:#fff;color:var(--wine);font:800 1.1rem/1 var(--sans);cursor:pointer;display:grid;place-items:center;padding:0}
+.qty button:hover{background:var(--wine);color:#fff}
+.qty span{min-width:1.4em;text-align:center;font-weight:800}
+.box{background:linear-gradient(160deg,#f9dde1,#f4c3cc);border-radius:26px;padding:22px;display:flex;flex-direction:column;gap:14px;align-self:start;position:sticky;top:16px}
+.slots{display:grid;grid-template-columns:repeat(var(--cols,3),1fr);gap:8px;background:#fff7f4;border-radius:18px;padding:14px;border:3px dashed #e9b4be}
+.slot{aspect-ratio:1;border-radius:50%;background:#f7e3e6;display:grid;place-items:center;overflow:hidden}
+.slot svg{width:100%;height:100%;animation:pop .3s}
+@keyframes pop{from{transform:scale(.3);opacity:0}}
+.tot{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.tot b{font:700 1.7rem/1 var(--serif);color:var(--wine)}
+.tot span{color:var(--muted);font-size:.9rem;font-weight:700}
+.box .wa{width:100%}
+.hint{margin:0;font-size:.84rem;color:var(--muted)}
+
+/* promo */
+.promo{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center;background:var(--pink);border-radius:36px;padding:44px;overflow:hidden}
+.promo ul{list-style:none;margin:16px 0 22px;padding:0;display:grid;gap:10px}
+.promo li{display:flex;gap:10px;font-weight:700}
+.promo li::before{content:"";flex:none;width:22px;height:22px;border-radius:50%;background:var(--wine) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7 12.5l3.2 3.2L17 9' fill='none' stroke='%23fff' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat;margin-top:.15em}
+.promo .art{display:grid;place-items:center;background:#fff7f4;border-radius:28px;padding:26px;aspect-ratio:1.1}
+.promo .art svg{width:70%}
+
+/* pedido rápido */
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;counter-reset:s}
+.steps li{counter-increment:s;background:#fff;border-radius:24px;padding:26px;position:relative;box-shadow:0 14px 28px -24px rgba(122,31,53,.6)}
+.steps li::before{content:counter(s);position:absolute;right:18px;top:8px;font:700 3.6rem/1 var(--serif);color:var(--pink)}
+.steps b{display:block;font:700 1.2rem/1.2 var(--serif);margin-bottom:6px;padding-right:40px}
+.steps p{margin:0;color:var(--muted);font-size:.95rem}
+.contact{margin-top:22px;display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;align-items:center;background:var(--wine);color:#fff;border-radius:32px;padding:36px}
+.contact h2{color:#fff}
+.contact p{margin:8px 0 0;color:#f0cfd5;max-width:42ch}
+footer{padding:40px 0 44px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:var(--muted);font-size:.88rem}
+
+@media(max-width:860px){
+  nav.menu{display:none}
+  .hero{grid-template-columns:1fr 1fr;grid-template-areas:"wrap wrap" "a b";padding:28px 16px 0;min-height:0;gap:0 12px;border-radius:28px}
+  .cwrap{margin-bottom:22px}
+  .circle{margin:0 auto;width:min(100%,380px);aspect-ratio:auto;border-radius:190px;padding:46px 22px}
+  .ph.a,.ph.b{width:100%;margin:0 0 22px;justify-self:stretch;align-self:end}
+  .ph.c{right:2%;bottom:-26px;width:30%}
+  .hero::after{height:60px}
+  .trio{grid-template-columns:1fr;gap:16px;margin-top:44px}
+  .flag{padding-bottom:56px}
+  .builder{grid-template-columns:1fr;padding:22px}
+  .box{position:static}
+  .promo{grid-template-columns:1fr;padding:28px}
+  section{padding-top:60px}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.2 14.3c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-1.9.9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5-.1.2-.2.3-.4.5l-.3.4c-.1.1-.3.3-.1.6.2.3.7 1.2 1.5 1.9 1 .9 1.9 1.2 2.2 1.3.3.1.4.1.6-.1l.8-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.8-.1 1.4Z"/></symbol><symbol id="i-flower" viewBox="0 0 40 40"><g fill="#f4a3b4" stroke="#7a1f35" stroke-width="2" stroke-linejoin="round"><circle cx="20" cy="9" r="7"/><circle cx="31" cy="17" r="7"/><circle cx="27" cy="30" r="7"/><circle cx="13" cy="30" r="7"/><circle cx="9" cy="17" r="7"/></g><circle cx="20" cy="20" r="6.5" fill="#ffd98a" stroke="#7a1f35" stroke-width="2"/></symbol></svg>
+
+<div class="nodo-bar"><a href="../../#portfolio">&larr; Voltar ao portfólio</a><span>Projeto de demonstração · Site por <a href="../../">Nodo</a></span></div>
+<div class="strip" aria-hidden="true"><div class="t"><span>Encomendas de Natal abertas ✦ Entrega em São Bernardo do Campo ✦ Bolos, docinhos e cupcakes feitos à mão ✦</span><span>Encomendas de Natal abertas ✦ Entrega em São Bernardo do Campo ✦ Bolos, docinhos e cupcakes feitos à mão ✦</span></div></div>
+
+<div class="wrap">
+  <header class="top">
+    <a class="logo" href="#topo" aria-label="Flor de Açúcar, início"><svg aria-hidden="true"><use href="#i-flower"/></svg><span>Flor de Açúcar<small>Confeitaria artesanal</small></span></a>
+    <nav class="menu" aria-label="Seções"><a href="#cardapio">Cardápio</a><a href="#caixa">Monte sua caixa</a><a href="#encomendas">Encomendas</a><a href="#contato">Contato</a></nav>
+    <a class="wa sm" data-wa data-msg="Olá! Quero fazer uma encomenda." href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Encomendar</a>
+  </header>
+
+  <main id="topo">
+    <section style="padding-top:8px">
+      <div class="hero" id="hero">
+        <figure class="ph a" data-img="macarons-cut" data-ext="png" data-alt="Macarons coloridos" data-fb="macarons" data-fb="macarons"></figure>
+        <div class="cwrap">
+          <svg class="seal" viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="58" fill="#7a1f35"/><defs><path id="sp" d="M60 60m-41 0a41 41 0 1 1 82 0a41 41 0 1 1-82 0"/></defs><g class="spin"><text font-family="Nunito,sans-serif" font-weight="800" font-size="11" fill="#ffe3e8"><textPath href="#sp" textLength="250" lengthAdjust="spacing">FEITO À MÃO • SOB ENCOMENDA • </textPath></text></g><path d="M60 78C47 70 44 61 50 56c4-3 8-1 10 3 2-4 6-6 10-3 6 5 3 14-10 22Z" fill="#ff8fab"/></svg>
+          <div class="circle">
+            <svg class="heart" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 34C6 25 4 15 10 10c4-3 8-1 10 3 2-4 6-6 10-3 6 5 4 15-10 24Z" fill="#e8587c" stroke="#7a1f35" stroke-width="2.5" stroke-linejoin="round"/></svg>
+            <h1>Doce de <em>começo</em> a fim</h1>
+            <p>Bolos, docinhos e cupcakes feitos à mão, sob encomenda, em São Bernardo do Campo.</p>
+            <div class="btns">
+              <a class="wa pulse" data-wa data-msg="Olá! Quero fazer uma encomenda." href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Fazer encomenda</a>
+              <a class="pill" href="#cardapio">Ver cardápio</a>
+            </div>
+          </div>
+          <figure class="ph c" data-img="cupcakes" data-alt="Cupcakes com cobertura rosa" data-fb="cupcake"></figure>
+        </div>
+        <figure class="ph b" data-img="bolo-festa" data-alt="Bolo de festa de dois andares" data-fb="tier"></figure>
+      </div>
+    </section>
+
+    <div class="trio">
+      <div class="flag"><div class="ic" id="ic1" aria-hidden="true"></div><h3>Bolos decorados</h3><p>Aniversário, casamento e chá de bebê, do jeitinho que você sonhou.</p><a class="pill" data-wa data-msg="Olá! Quero um bolo decorado." href="#" target="_blank" rel="noopener">Quero um bolo</a></div>
+      <div class="mid"><div class="arch" id="arch" data-img="docinhos" data-alt="Docinhos de festa em forminhas"></div><h3>Docinhos de festa</h3><p>Brigadeiro, beijinho e mais, a partir de 25 unidades.</p></div>
+      <div class="flag"><div class="ic" id="ic3" aria-hidden="true"></div><h3>Especiais de época</h3><p>Panetones, ovos de Páscoa e caixas de presente em cada estação.</p><a class="pill" data-wa data-msg="Olá! Quero saber dos especiais de época." href="#" target="_blank" rel="noopener">Ver especiais</a></div>
+    </div>
+
+    <section id="cardapio">
+      <div class="head"><div class="eyebrow">Cardápio</div><h2>Os queridinhos <em>da casa</em></h2><p>Tudo feito na hora da encomenda, com ingredientes de verdade.</p></div>
+      <div class="menu-grid" id="menu"></div>
+    </section>
+
+        <section id="galeria">
+      <div class="head"><span class="eyebrow">Galeria</span><h2>Do forno para a <em>festa</em></h2><p>Um gostinho do que sai da nossa cozinha.</p></div>
+      <div class="gal" id="gal"></div>
+      <p class="credit">Fotos de <a href="https://unsplash.com/@tuvaloland" target="_blank" rel="noopener">Tuva Løland</a>, <a href="https://unsplash.com/@heydivani" target="_blank" rel="noopener">Divani</a>, <a href="https://unsplash.com/@karlygomez" target="_blank" rel="noopener">Karly Gomez</a>, <a href="https://unsplash.com/@thomasw" target="_blank" rel="noopener">Thomas William</a>, <a href="https://unsplash.com/@jonathanborba" target="_blank" rel="noopener">Jonathan Borba</a> e <a href="https://unsplash.com/@evangelinas_photography" target="_blank" rel="noopener">Evangelina Silina</a> no Unsplash. Imagens ilustrativas desta demonstração.</p>
+    </section>
+
+    <section id="caixa">
+      <div class="head"><div class="eyebrow">Monte sua caixa</div><h2>Escolha os sabores, <em>a gente embala</em></h2><p>Toque nos sabores e veja a caixa se enchendo. Quando estiver pronta, o pedido vai direto para o WhatsApp.</p></div>
+      <div class="builder">
+        <div>
+          <div class="eyebrow" style="margin-bottom:8px">1. Tamanho da caixa</div>
+          <div class="sizes" id="sizes" role="group" aria-label="Tamanho da caixa"></div>
+          <div class="eyebrow" style="margin-bottom:10px">2. Sabores</div>
+          <div class="flavors" id="flavors"></div>
+        </div>
+        <div class="box">
+          <div class="eyebrow">Sua caixa</div>
+          <div class="slots" id="slots" aria-live="polite"></div>
+          <div class="tot"><span id="count">0 de 6 docinhos</span><b id="total">R$ 0,00</b></div>
+          <p class="hint" id="hint">Escolha pelo menos um docinho para pedir.</p>
+          <a class="wa" id="order" data-wa-box href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Pedir esta caixa</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="encomendas">
+      <div class="promo">
+        <div>
+          <div class="eyebrow">Encomendas</div>
+          <h2>Festa, aniversário ou <em>presente?</em></h2>
+          <ul>
+            <li>Peça com 7 dias de antecedência</li>
+            <li>Orçamento no mesmo dia pelo WhatsApp</li>
+            <li>Entrega em São Bernardo do Campo e região</li>
+          </ul>
+          <a class="wa" data-wa data-msg="Olá! Quero um orçamento para uma festa." href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Pedir orçamento</a>
+        </div>
+        <div class="art" id="promo-art" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <section id="contato">
+      <div class="head"><div class="eyebrow">Pedido rápido</div><h2>Em três passos, <em>é só esperar o doce</em></h2></div>
+      <ol class="steps">
+        <li><b>Escolha</b><p>Veja o cardápio ou monte a sua caixa de docinhos.</p></li>
+        <li><b>Chame no WhatsApp</b><p>Combine data, horário e endereço de entrega.</p></li>
+        <li><b>Receba e comemore</b><p>Entregamos fresquinho, bem embalado e no horário combinado.</p></li>
+      </ol>
+      <div class="contact">
+        <div><h2>Bateu a vontade de doce?</h2><p>Atendemos de terça a sábado, das 9h às 18h. Rua das Flores, 120, Centro, São Bernardo do Campo.</p></div>
+        <a class="wa big pulse" data-wa data-msg="Olá! Quero fazer um pedido." href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Chamar no WhatsApp</a>
+      </div>
+    </section>
+  </main>
+
+  <footer><span>© Flor de Açúcar Confeitaria</span><span>Site de exemplo para portfólio · ilustrações meramente ilustrativas</span></footer>
+</div>
+
+<script>
+(function(){
+  // Troque o número aqui (55 + DDD + número, só dígitos).
+  var PHONE='5511947861810';
+  function wa(m){return 'https://wa.me/'+PHONE+'?text='+encodeURIComponent(m)}
+  function setWa(){document.querySelectorAll('[data-wa]').forEach(function(a){a.href=wa(a.getAttribute('data-msg')||'Olá! Quero fazer uma encomenda.')})}
+
+  // ---------- modelos 3D fofos (desenhados em código) ----------
+  (function(){var d='';
+    function rg(id,a,b,c){d+='<radialGradient id="g3-'+id+'" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="'+a+'"/><stop offset=".55" stop-color="'+b+'"/><stop offset="1" stop-color="'+c+'"/></radialGradient>'}
+    function lg(id,a,b,c){d+='<linearGradient id="g3-'+id+'" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="'+c+'"/><stop offset=".28" stop-color="'+a+'"/><stop offset=".62" stop-color="'+b+'"/><stop offset="1" stop-color="'+c+'"/></linearGradient>'}
+    rg('straw','#ff8a99','#e8334f','#a3132f');rg('cherry','#ff93a3','#d91e3d','#8f1230');rg('frost','#fff3f6','#ffc4d3','#f08aa5');rg('frostL','#f7eaff','#dcb8f5','#b58ae0');
+    rg('mcP','#ffdbe5','#f9a9be','#e5769a');rg('mcY','#fff4c4','#ffd873','#eeaf3a');rg('mcL','#f1e0ff','#d3b0f2','#a57bd6');
+    rg('coco','#ffffff','#fff2e0','#ebd5b8');rg('choc','#b0705a','#6a3320','#36170d');rg('cajuG','#eeb985','#c98f55','#8a5a2d');rg('olhoG','#fffafa','#f3dcdf','#d9aeb6');rg('bichoG','#ffa3b5','#ff6b8d','#cf3a63');rg('blue','#b4d0ff','#6f9df0','#4467bd');
+    rg('plate','#ffffff','#f6dfe5','#d9aab8');rg('cream','#ffffff','#fff6ec','#f0dcc9');
+    lg('liner','#ffc7d4','#f48fa8','#c9607e');lg('cake','#ffffff','#fff0ec','#e9c4c6');lg('sponge','#fadba3','#edb877','#c88a4b');lg('boxP','#ffb7c9','#f27a9d','#c4476f');lg('boxL','#ffd6e1','#ffa4bc','#e06a8e');lg('pband','#ffd3de','#f58ca8','#d45c82');
+    d+='<filter id="g3-bl" x="-30%" y="-100%" width="160%" height="300%"><feGaussianBlur stdDeviation="3.2"/></filter>';
+    var h=document.createElement('div');h.innerHTML='<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>'+d+'</defs></svg>';document.body.appendChild(h.firstChild);
+  })();
+  function svg(vb,inner,extra){return '<svg viewBox="'+vb+'" '+(extra||'')+'>'+inner+'</svg>'}
+  function U(id){return 'url(#g3-'+id+')'}
+  function hl(cx,cy,rx,ry,rot,o){return '<ellipse cx="'+cx+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'" fill="#fff" opacity="'+(o||.5)+'" transform="rotate('+(rot||0)+' '+cx+' '+cy+')"/>'}
+  function shd(cx,cy,rx){return '<ellipse cx="'+cx+'" cy="'+cy+'" rx="'+rx+'" ry="'+(rx*.14)+'" fill="#7a1f35" opacity=".28" filter="url(#g3-bl)"/>'}
+  function face(cx,cy,s){var e='#4a1d2e';return '<g><circle cx="'+(cx-9*s)+'" cy="'+cy+'" r="'+2.8*s+'" fill="'+e+'"/><circle cx="'+(cx+9*s)+'" cy="'+cy+'" r="'+2.8*s+'" fill="'+e+'"/><circle cx="'+(cx-9.8*s)+'" cy="'+(cy-1*s)+'" r="'+.9*s+'" fill="#fff"/><circle cx="'+(cx+8.2*s)+'" cy="'+(cy-1*s)+'" r="'+.9*s+'" fill="#fff"/><ellipse cx="'+(cx-15*s)+'" cy="'+(cy+4.5*s)+'" rx="'+4.2*s+'" ry="'+2.5*s+'" fill="#ff5f8a" opacity=".45"/><ellipse cx="'+(cx+15*s)+'" cy="'+(cy+4.5*s)+'" rx="'+4.2*s+'" ry="'+2.5*s+'" fill="#ff5f8a" opacity=".45"/><path d="M'+(cx-4*s)+' '+(cy+3.5*s)+'q'+4*s+' '+4.6*s+' '+8*s+' 0" fill="none" stroke="'+e+'" stroke-width="'+1.9*s+'" stroke-linecap="round"/></g>'}
+  function straw(cx,cy,s){var dots=[[-5,0],[3,-2],[6,5],[-2,6],[0,11],[-7,7]].map(function(p){return '<ellipse cx="'+p[0]+'" cy="'+p[1]+'" rx=".9" ry="1.4" fill="#ffe9a8"/>'}).join('');
+    return '<g transform="translate('+cx+' '+cy+') scale('+s+')"><path d="M0 15C-15 7-15-8-7-10c3-1 11-1 14 0 8 2 8 17-7 25Z" fill="'+U('straw')+'"/>'+dots+'<path d="M-8-10L0-5 8-10 4-15 0-12-4-15Z" fill="#3fbf67"/><ellipse cx="-6" cy="-3" rx="2.2" ry="4.5" fill="#fff" opacity=".55" transform="rotate(14 -6 -3)"/></g>'}
+  var A={
+    cupcake:function(fr){fr=U(fr||'frost');var o=shd(60,124,36);
+      o+='<path d="M29 70H91L84 118Q60 126 36 118Z" fill="'+U('liner')+'"/>';
+      for(var i=0;i<5;i++)o+='<path d="M'+(33+i*13.5)+' 74L'+(39+i*10.5)+' 118" stroke="#fff" stroke-width="2" opacity=".22" stroke-linecap="round"/>';
+      o+='<ellipse cx="60" cy="70" rx="31" ry="7" fill="#f7a1b6"/>'+
+      '<ellipse cx="60" cy="66" rx="35" ry="12" fill="'+fr+'"/>'+hl(44,63,10,3,-18,.5)+
+      '<ellipse cx="60" cy="53" rx="28" ry="11" fill="'+fr+'"/>'+hl(46,49,8,2.6,-18,.5)+
+      '<ellipse cx="60" cy="41" rx="20" ry="9.5" fill="'+fr+'"/>'+
+      '<path d="M50 38Q60 16 70 38Q60 44 50 38Z" fill="'+fr+'"/>'+
+      '<g fill="#ffd98a"><rect x="38" y="64" width="6" height="2.8" rx="1.4" transform="rotate(35 41 65)"/><rect x="76" y="66" width="6" height="2.8" rx="1.4" transform="rotate(-30 79 67)"/></g><g fill="#7ec8ff"><rect x="50" y="71" width="6" height="2.8" rx="1.4" transform="rotate(-20 53 72)"/></g>'+
+      face(60,55,.95)+
+      '<path d="M60 27c0-7 3-11 9-14" fill="none" stroke="#3a8f55" stroke-width="2.6" stroke-linecap="round"/><circle cx="60" cy="28" r="9" fill="'+U('cherry')+'"/>'+hl(56.5,24.5,2.6,3.8,30,.8);
+      return o},
+    macarons:function(){var o=shd(65,124,46);
+      function mac(y,g){return '<ellipse cx="65" cy="'+(y+12)+'" rx="40" ry="8" fill="'+U(g)+'"/><rect x="28" y="'+(y+1)+'" width="74" height="13" rx="6.5" fill="'+U('cream')+'"/><path d="M24 '+(y+4)+'C24 '+(y-24)+' 106 '+(y-24)+' 106 '+(y+4)+'C106 '+(y+10)+' 88 '+(y+12)+' 65 '+(y+12)+'C42 '+(y+12)+' 24 '+(y+10)+' 24 '+(y+4)+'Z" fill="'+U(g)+'"/>'+hl(46,y-6,15,4.6,-16,.5)}
+      return o+mac(100,'mcL')+mac(66,'mcY')+mac(32,'mcP')+face(65,31,1.05)},
+    tier:function(){var o=shd(100,203,76);
+      o+='<path d="M88 176H112L116 196H84Z" fill="'+U('cake')+'"/><ellipse cx="100" cy="194" rx="80" ry="10" fill="'+U('plate')+'"/>';
+      o+='<path d="M26 128V166C26 176 62 184 100 184S174 176 174 166V128Z" fill="'+U('cake')+'"/><path d="M26 154C26 164 62 172 100 172S174 164 174 154V166C174 176 138 184 100 184S26 176 26 166Z" fill="'+U('pband')+'"/><ellipse cx="100" cy="128" rx="74" ry="14" fill="'+U('coco')+'"/>';
+      for(var x=36;x<=164;x+=14){var t=(x-100)/74;o+='<circle cx="'+x+'" cy="'+(154+18*(1-t*t)+1)+'" r="3.4" fill="'+U('coco')+'"/>'}
+      o+=face(100,150,.9);
+      o+='<path d="M52 92V118C52 126 74 132 100 132S148 126 148 118V92Z" fill="'+U('cake')+'"/><path d="M52 104C52 112 74 118 100 118S148 112 148 104V112C148 120 124 126 100 126S52 120 52 112Z" fill="'+U('pband')+'"/><ellipse cx="100" cy="92" rx="48" ry="10" fill="'+U('coco')+'"/>';
+      o+=straw(80,84,.95)+straw(120,84,.95)+straw(100,78,1.1)+'<circle cx="92" cy="94" r="4.6" fill="'+U('blue')+'"/><circle cx="109" cy="95" r="4.6" fill="'+U('blue')+'"/>';
+      return o},
+    naked:function(){var o=shd(100,188,72);
+      o+='<path d="M34 100V164C34 174 64 182 100 182S166 174 166 164V100Z" fill="'+U('sponge')+'"/>';
+      o+='<path d="M31 117C31 126 64 133 100 133S169 126 169 117V125C169 134 136 141 100 141S31 134 31 125Z" fill="'+U('cake')+'"/><path d="M31 142C31 151 64 158 100 158S169 151 169 142V150C169 159 136 166 100 166S31 159 31 150Z" fill="'+U('cake')+'"/>';
+      o+=face(100,150,.72).replace(/<g>/,'<g>');
+      o+='<ellipse cx="100" cy="100" rx="66" ry="15" fill="'+U('coco')+'"/>';
+      o+=straw(62,92,.95)+straw(138,94,.95)+straw(84,84,1.05)+straw(118,86,1.05)+'<circle cx="100" cy="97" r="5.4" fill="'+U('blue')+'"/><circle cx="72" cy="101" r="4.6" fill="'+U('blue')+'"/><path d="M96 80c-4-8 2-14 9-12-1 7-4 11-9 12Z" fill="#3fbf67"/>';
+      return o},
+    caixa:function(){return shd(80,140,56)+'<rect x="26" y="80" width="108" height="54" rx="9" fill="'+U('boxP')+'"/><rect x="19" y="60" width="122" height="28" rx="9" fill="'+U('boxL')+'"/><rect x="25" y="63" width="110" height="7" rx="3.5" fill="#fff" opacity=".35"/><rect x="71" y="60" width="18" height="74" fill="'+U('cake')+'"/>'+
+      '<ellipse cx="60" cy="52" rx="20" ry="11" transform="rotate(-22 60 52)" fill="'+U('frost')+'"/><ellipse cx="100" cy="52" rx="20" ry="11" transform="rotate(22 100 52)" fill="'+U('frost')+'"/><circle cx="80" cy="57" r="8" fill="'+U('frost')+'"/>'+hl(55,47,7,2.4,-22,.7)+hl(75,54,2.6,1.8,0,.8)+face(50,108,.75)+'<path d="M104 100c-3-5-9-2-6 3l6 5 6-5c3-5-3-8-6-3Z" fill="#fff" opacity=".7"/>'},
+    bow:function(){return '<ellipse cx="38" cy="58" rx="26" ry="15" transform="rotate(-24 38 58)" fill="'+U('frost')+'"/><ellipse cx="82" cy="58" rx="26" ry="15" transform="rotate(24 82 58)" fill="'+U('frost')+'"/><path d="M54 66l-14 34 12-6 6 14 8-34Z" fill="'+U('frost')+'"/><path d="M66 66l14 34-12-6-6 14-8-34Z" fill="'+U('frost')+'"/><circle cx="60" cy="62" r="11" fill="'+U('cherry')+'"/>'+hl(56,58,3,4,30,.8)}
+  };
+  function put(id,vb,inner,extra){var e=document.getElementById(id);if(e)e.innerHTML=svg(vb,inner,extra)}
+
+  // ---------- fotos reais (opcionais) ----------
+  // Coloque as fotos em portfolio/flor-de-acucar/img/ com estes nomes: macarons.jpg, bolo-festa.jpg, cupcakes.jpg, bolo-naked.jpg, docinhos.jpg.
+  // Enquanto uma foto não existir, o site mostra a ilustração no lugar.
+  function photo(el,name,alt,ext){
+    var im=new Image();im.alt=alt||'';im.decoding='async';
+    im.onload=function(){el.innerHTML='';el.appendChild(im);el.classList.add('has')};
+    im.src='img/'+name+'.'+(ext||'jpg');
+  }
+  var FBV={macarons:['0 0 130 130',function(){return A.macarons()}],tier:['0 0 200 210',function(){return A.tier()}],cupcake:['0 0 120 130',function(){return A.cupcake()}]};
+  document.querySelectorAll('.ph[data-img]').forEach(function(el){
+    var f=FBV[el.getAttribute('data-fb')];if(f)el.innerHTML=svg(f[0],f[1]());
+    photo(el,el.getAttribute('data-img'),el.getAttribute('data-alt'),el.getAttribute('data-ext'));
+  });
+  put('ic1','0 0 200 210',A.tier());
+  put('ic3','0 0 160 150',A.caixa());
+    put('promo-art','0 0 150 130','<g transform="translate(0 22) scale(.72)">'+A.cupcake('frost')+'</g><g transform="translate(62 34) scale(.72)">'+A.cupcake('frostL')+'</g><g transform="translate(44 -4) scale(.5)">'+A.bow()+'</g>');
+
+  // confete no herói
+  var hero=document.getElementById('hero'),cols=['#fff','#e8587c','#ffd98a','#d8b4f0','#fff'];
+  for(var i=0;i<14;i++){var c=document.createElement('i');c.className='conf';var s=6+Math.random()*8;c.style.cssText='left:'+(4+Math.random()*92)+'%;top:'+(6+Math.random()*60)+'%;width:'+s+'px;height:'+s+'px;background:'+cols[i%5]+';opacity:.8;--d:'+(-Math.random()*5).toFixed(1)+'s';hero.appendChild(c)}
+
+  // ---------- cardápio ----------
+  var MENU=[
+    ['Bolo naked de morango','Massa branca, creme de baunilha e morangos frescos. 15 fatias.','R$ 148','','#f27a9b','naked'],
+    ['Caixa de macarons','Seis macarons de sabores sortidos, em caixa para presente.','R$ 54','','#a98be8','macarons'],
+    ['Cupcake red velvet','Massa aveludada com cobertura de cream cheese e cereja.','R$ 12','por unidade','#ff9d6c','cupcake'],
+    ['Bolo de festa dois andares','Decoração personalizada com o tema da sua comemoração.','Sob consulta','','#7a1f35','tier']
+  ];
+  var VB={naked:'0 0 200 200',macarons:'0 0 130 130',tier:'0 0 200 210',cupcake:'0 0 120 130'};
+  var menu=document.getElementById('menu');
+  MENU.forEach(function(m,k){
+    var el=document.createElement('article');el.className='item';
+    var pic=document.createElement('div');pic.className='pic';pic.style.setProperty('--bg',m[4]);
+    pic.innerHTML=svg(VB[m[5]],A[m[5]](),'class="m"')+'<i class="sat s1">'+svg('-16 -17 32 34',straw(0,0,1))+'</i><i class="sat s2">'+svg('0 0 20 20','<circle cx="10" cy="10" r="8" fill="'+U('cherry')+'"/>'+hl(7,7,2,3,30,.8))+'</i><i class="sat s3">'+svg('0 0 24 12','<rect x="2" y="3" width="20" height="6" rx="3" fill="#ffd98a"/>')+'</i>';
+    pic.style.setProperty('--d',(k*-1.3)+'s');
+    var b=document.createElement('div');b.className='body';
+    var h=document.createElement('h3');h.textContent=m[0];
+    var p=document.createElement('p');p.textContent=m[1];
+    var r=document.createElement('div');r.className='row';
+    var pr=document.createElement('div');pr.className='price';pr.textContent=m[2];
+    if(m[3]){var sm=document.createElement('small');sm.textContent=' '+m[3];pr.appendChild(sm)}
+    var a=document.createElement('a');a.className='pill fill';a.target='_blank';a.rel='noopener';a.href=wa('Olá! Quero pedir: '+m[0]+'.');a.textContent='Pedir';
+    r.appendChild(pr);r.appendChild(a);b.appendChild(h);b.appendChild(p);b.appendChild(r);el.appendChild(pic);el.appendChild(b);menu.appendChild(el);
+  });
+
+
+  // ---------- galeria (fotos públicas do Unsplash; se não carregar, a foto some) ----------
+  var GAL=[['1559553156-2e97137af16f','Bolo de morango'],['1597895139322-0a1ef77b3c30','Macarons'],['1599785209707-a456fc1337bb','Cupcakes'],['1525257831700-183b9b8bf5c4','Bolo de andares'],['1767396867908-cc292d921a04','Docinhos'],['1488477304112-4944851de03d','Bolo com frutas']];
+  var gal=document.getElementById('gal');
+  GAL.forEach(function(g){
+    var f=document.createElement('figure');var im=new Image();im.alt=g[1];im.decoding='async';
+    im.onload=function(){f.appendChild(im);var c=document.createElement('figcaption');c.textContent=g[1];f.appendChild(c)};
+    im.onerror=function(){f.remove();if(!gal.children.length)document.getElementById('galeria').remove()};
+    im.src='https://images.unsplash.com/photo-'+g[0]+'?auto=format&fit=crop&w=900&q=75';
+    gal.appendChild(f);
+  });
+
+  // ---------- monte sua caixa ----------
+  function dc(t){
+    var sp=function(pts,fill,r){return pts.map(function(p,i){return '<circle cx="'+p[0]+'" cy="'+p[1]+'" r="'+r+'" fill="'+fill+'"/>'}).join('')};
+    var P=[[22,18],[30,13],[38,19],[25,24],[35,25],[43,26],[17,26]];
+    var ball={brigadeiro:'choc',beijinho:'coco',cajuzinho:'cajuG',olho:'olhoG',bicho:'bichoG',casadinho:'coco'}[t];
+    var o='<circle cx="30" cy="28" r="19" fill="'+U(ball)+'"/>';
+    if(t==='brigadeiro')o+=[[20,17,'#ffd98a',30],[30,12,'#ff7a95',-10],[39,18,'#fff',50],[24,25,'#c9a6f2',-40],[36,24,'#ffd98a',20],[44,25,'#7ec8ff',60]].map(function(p){return '<rect x="'+p[0]+'" y="'+p[1]+'" width="6" height="2.6" rx="1.3" fill="'+p[2]+'" transform="rotate('+p[3]+' '+(p[0]+3)+' '+(p[1]+1.3)+')"/>'}).join('');
+    if(t==='beijinho')o+=sp(P,'#efdcc0',1.5);
+    if(t==='cajuzinho')o+=sp(P,'#fff',1.4);
+    if(t==='olho')o+='<ellipse cx="30" cy="18" rx="7" ry="5" fill="'+U('choc')+'"/>';
+    if(t==='bicho')o+=sp(P,'#fff',1.5)+'<path d="M30 9c5-5 12-4 12 0-5 3-10 3-12 0Z" fill="#4fc16a"/>';
+    if(t==='casadinho')o+='<path d="M30 9A19 19 0 0 0 30 47Z" fill="'+U('choc')+'"/>';
+    o+=hl(22,19,6,2.8,-30,.6)+face(30,30,.5);
+    o+='<path d="M12 38H48L44 55Q30 60 16 55Z" fill="'+U('liner')+'"/><ellipse cx="30" cy="38" rx="18" ry="4" fill="#f7a1b6"/><path d="M19 41l2 13M26 42l1 15M34 42l-1 15M41 41l-2 13" stroke="#fff" stroke-width="1.4" opacity=".28"/>';
+    return '<svg viewBox="0 0 60 62">'+o+'</svg>';
+  }
+  (function(){var o='';[['brigadeiro',30,0],['beijinho',90,0],['cajuzinho',0,55],['olho',60,55],['bicho',120,55]].forEach(function(p){o+=dc(p[0]).replace('<svg ','<svg x="'+p[1]+'" y="'+p[2]+'" width="60" height="62" ')});put('arch','0 0 180 120',o)})();
+  var FL=[['brigadeiro','Brigadeiro'],['beijinho','Beijinho'],['cajuzinho','Cajuzinho'],['olho','Olho de sogra'],['bicho','Bicho de pé'],['casadinho','Casadinho']];
+  var UN=3.5,size=12,cnt={};FL.forEach(function(f){cnt[f[0]]=0});
+  var sizes=document.getElementById('sizes'),fls=document.getElementById('flavors'),slots=document.getElementById('slots');
+  var countEl=document.getElementById('count'),totalEl=document.getElementById('total'),hint=document.getElementById('hint'),order=document.getElementById('order');
+  function sum(){return FL.reduce(function(a,f){return a+cnt[f[0]]},0)}
+  function money(v){return 'R$ '+v.toFixed(2).replace('.',',')}
+  function paint(){
+    var n=sum(),list=[];
+    FL.forEach(function(f){for(var i=0;i<cnt[f[0]];i++)list.push(f[0])});
+    slots.style.setProperty('--cols',size>=24?6:size>=12?4:3);
+    slots.innerHTML='';
+    for(var i=0;i<size;i++){var s=document.createElement('div');s.className='slot';if(list[i])s.innerHTML=dc(list[i]);slots.appendChild(s)}
+    countEl.textContent=n+' de '+size+' docinhos';
+    totalEl.textContent=money(n*UN);
+    document.querySelectorAll('.fl').forEach(function(el){el.querySelector('.qty span').textContent=cnt[el.getAttribute('data-k')]});
+    if(n===0){hint.textContent='Escolha pelo menos um docinho para pedir.'}
+    else if(n<size){hint.textContent='Faltam '+(size-n)+' para completar a caixa.'}
+    else{hint.textContent='Caixa completa! Agora é só pedir.'}
+    var parts=FL.filter(function(f){return cnt[f[0]]>0}).map(function(f){return cnt[f[0]]+' '+f[1].toLowerCase()});
+    var msg=n?'Olá! Quero uma caixa de '+size+' docinhos ('+n+' escolhidos): '+parts.join(', ')+'. Total estimado '+money(n*UN)+'.':'Olá! Quero montar uma caixa de docinhos.';
+    order.href=wa(msg);
+  }
+  [6,12,24].forEach(function(n){
+    var b=document.createElement('button');b.type='button';b.className='size';b.textContent=n+' docinhos';b.setAttribute('aria-pressed',n===size?'true':'false');
+    b.addEventListener('click',function(){
+      size=n;sizes.querySelectorAll('.size').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});
+      var extra=sum()-size;
+      if(extra>0){FL.slice().reverse().forEach(function(f){while(extra>0&&cnt[f[0]]>0){cnt[f[0]]--;extra--}})}
+      paint();
+    });
+    sizes.appendChild(b);
+  });
+  FL.forEach(function(f){
+    var el=document.createElement('div');el.className='fl';el.setAttribute('data-k',f[0]);
+    el.innerHTML='<div class="ico">'+dc(f[0])+'</div><b>'+f[1]+'</b><div class="qty"><button type="button" aria-label="Menos '+f[1]+'">&minus;</button><span>0</span><button type="button" aria-label="Mais '+f[1]+'">+</button></div>';
+    var bs=el.querySelectorAll('button');
+    bs[0].addEventListener('click',function(){if(cnt[f[0]]>0){cnt[f[0]]--;paint()}});
+    bs[1].addEventListener('click',function(){if(sum()<size){cnt[f[0]]++;paint()}});
+    fls.appendChild(el);
+  });
+  paint();
+  setWa();
+})();
+</script>
+</body>
+</html>
